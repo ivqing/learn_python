@@ -6,6 +6,7 @@ def log(func):
     def wrapper(*args, **kw):
         print('begin call %s' % func.__name__)
         return func(*args, **kw)
+        print('end call %s' % func.__name__) # this will not excute
     return wrapper
 
 @log
